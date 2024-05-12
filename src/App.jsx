@@ -1,12 +1,12 @@
 import { Header } from './components/Header.jsx'
-import { Posts } from './Post.jsx';
+import { Posts } from './components/Post.jsx';
 import { Sidebar } from './components/Sidebar.jsx';
 
 import './global.css'
 import styles from './App.module.css'
 
 export function App() {
-  return(
+  return (
     <div>
       <Header />
 
@@ -16,13 +16,18 @@ export function App() {
 
         <main>
 
-          <Posts 
-            author="Gustavo Ricardo" 
+          <Posts
+            author="Seu Madruga"
             content="lorem ipsum dolor sit amet"
           />
 
-          <Posts 
-            author="Yasmim Novais" 
+          <Posts
+            author="Dona Florinda"
+            content="lorem ipsum dolor sit amet"
+          />
+
+          <Posts
+            author="Professor Girafales"
             content="lorem ipsum dolor sit amet"
           />
 

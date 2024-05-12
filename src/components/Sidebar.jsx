@@ -17,8 +17,8 @@ export function Sidebar () {
           className={styles.avatar}
         />
 
-        <strong>Gustavo Ricardo</strong>
-        <span>Front End Developer</span>
+        <strong>Seu Madruga</strong>
+        <span>Developer</span>
 
         <footer>
           <a href="#">

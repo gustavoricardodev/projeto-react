@@ -2,6 +2,8 @@
   background: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;
+  position: sticky;
+  top: 2rem;
 }
 
 .cover {
