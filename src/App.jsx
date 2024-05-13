@@ -1,9 +1,40 @@
 import { Header } from './components/Header.jsx'
-import { Posts } from './components/Post.jsx';
+import { Post } from './components/Post.jsx';
 import { Sidebar } from './components/Sidebar.jsx';
 
 import './global.css'
 import styles from './App.module.css'
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/gustavoricardodev.png',
+      name: 'Seu Madruga',
+      role: 'Morador'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galera 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2024-05-13 19:30:00'),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'https://github.com/yyx990803.png',
+      name: 'Seu Barriga',
+      role: 'CTO @Vila'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galera 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2024-05-13 19:00:00'),
+  },
+];
 
 export function App() {
   return (
@@ -15,22 +46,15 @@ export function App() {
         <Sidebar />
 
         <main>
-
-          <Posts
-            author="Seu Madruga"
-            content="lorem ipsum dolor sit amet"
-          />
-
-          <Posts
-            author="Dona Florinda"
-            content="lorem ipsum dolor sit amet"
-          />
-
-          <Posts
-            author="Professor Girafales"
-            content="lorem ipsum dolor sit amet"
-          />
-
+          {posts.map((post, index) =>  {
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            )
+          })}
         </main>
       </div>
     </div>
