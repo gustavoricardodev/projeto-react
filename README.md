@@ -6,7 +6,7 @@ Para rodar o projeto, apenas precisamos utilizar os comandos:
 
 `npm install`
 
-`npm run serve`
+`npm run dev`
 
 Respectivamente.
 
