@@ -1,6 +1,6 @@
-import { Header } from './components/Header.jsx'
-import { Post } from './components/Post.jsx';
-import { Sidebar } from './components/Sidebar.jsx';
+import { Header } from './components/Header.tsx'
+import { Post } from './components/Post.tsx';
+import { Sidebar } from './components/Sidebar.tsx';
 
 import './global.css'
 import styles from './App.module.css'
@@ -46,7 +46,7 @@ export function App() {
         <Sidebar />
 
         <main>
-          {posts.map((post, index) =>  {
+          {posts.map((post) =>  {
             return (
               <Post
                 key={post.id}
